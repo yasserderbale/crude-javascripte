@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    h1{
+        margin-bottom: 15px;
+    }
+    h2{
+        margin-top: 3px;
+        letter-spacing: 2px;
+    }
+    body{
+        background-color: #222;
+        color: white;
+    }
+ 
+   .txt{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:wheat ;
+   } 
+    
+input{
+width: 100%;
+height: 41px;
+margin-bottom: 15px;
+margin-right: 4px;
+border-radius: 4px;
+padding: 5px;
+
+margin: 9px;
+    }
+    input:focus{
+        transform: scale(1.1);
+    }
+.tt{
+    
+    display: flex;
+    
+}
+button{
+    width: 100%;
+    background-color: blueviolet;
+    height: 51px;
+    margin-bottom: 25px;
+    cursor: pointer;
+color: white;
+    border-radius: 21px;
+    transition: 0.5s;
+}
+button:hover{
+    background:#51025f;
+    letter-spacing: 1px;
+}
+
+.er{
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+.er button{
+    width: 40%;
+}
+#op {
+    width: 69px;
+    margin-left: -30px;
+}
+.number {
+    width: 20px;
+    height: 20px;
+}
+table{
+    width: 100%;
+    margin-left: 40px;
+    text-align: center;
+}
+#totale{
+color: white ;
+    background-color: #a20b0b;
+    height: 33px;
+    width: 63px;
+    padding: 5px 0 0 0 ;
+    margin: 13px 0 0 0;
+}
+#totale::before{
+    content: 'totale';
+}
+
+</style>
+</head>
+
+<body>
+ <div class="txt">
+<h1>CRUDS</h1>
+<h2>PRODUCT   MANAGEMENT   SYSTEM</h2>
+ </div>
+
+    <div class="inp">
+<input type="text" placeholder="title" id="title">
+</div>   
+<div class="tt">
+<input onkeyup="gettotale()" id="price"placeholder="price"  type="number">
+<input onkeyup="gettotale()" id="discount" placeholder="discount" type="number">
+<input onkeyup="gettotale()" id="taxes" placeholder="taxes" type="number">
+<input onkeyup="gettotale()" id="ADS" placeholder="ADS"type="number" >
+<small  id="totale" ></small>
+</div>
+<input id="count" placeholder="count">
+<input id="catigerie" placeholder="catigerie">
+<button onclick="creation()" id="submit">create</button>
+<input type="Searche">
+<div class="er"> 
+   <button>Searche by title</button>
+    <button>Searche by Catigoey </button>
+    
+</div>
+<div id="deletall"></div>
+<table >
+    <tr >
+        <th>ID</th>
+        <th>PRICE</th>
+        <th>TAXEC</th>
+        <th>taxes</th>
+        <th>ADS</th>
+        <th>totale</th>
+
+        <td><button id="DELETE">DELETE</button></td>
+        <td><button id="UPDATE">UPDATE</button></td>
+    </tr>
+    <tbody id="tbody">
+<td>
+
+</td>
+
+
+    </tbody>
+ 
+    
+</table>
+<script src="scripte.js" ></script>
+</body>
+</html>
